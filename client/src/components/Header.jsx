@@ -7,7 +7,6 @@ const Header = () => {
         <div className="header">
             <div>
                 <BsActivity/>
-                {/*<TbZodiacCancer/>*/}
             </div>
             <div>
                 CancerWisePro
