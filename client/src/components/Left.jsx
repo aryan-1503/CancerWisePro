@@ -1,7 +1,7 @@
 // Left.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
-import demoImage from '../images/demo.png';
+import demoImage from '../images/demo2.png';
 import '../style/Left.css';
 
 const Left = ({ setPrediction, setLoading }) => {
@@ -47,20 +47,24 @@ const Left = ({ setPrediction, setLoading }) => {
                         Upload an image of your skin to analyze common types of skin cancer. If you have a mole, growth, or other skin concerns, consult a dermatologist.
                     </div>
                 </div>
-                <div className="uploaded-image">
-                    <img src={selectedImage} alt="" width="400px" />
+                <div className="left-content">
+                    <div className="uploaded-image">
+                        <img src={selectedImage} alt="" width="400px" height="250px"/>
+                    </div>
+                    <div className="buttons">
+                        <form onSubmit={handleSubmit}>
+                            <div className="image-form">
+                                <label htmlFor="InputImage" id="input-btn">
+                                    Upload Image
+                                    <input type="file" accept="image/*" name="InputImage" id="InputImage" style={{ display: "none" }} onChange={handleImageSelection} />
+                                </label>
+                            </div>
+                            <div className="analyse-btn">
+                                <button type="submit">Analyse!</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <form onSubmit={handleSubmit}>
-                    <div className="image-form">
-                        <label htmlFor="InputImage" id="input-btn">
-                            Upload Image
-                            <input type="file" accept="image/*" name="InputImage" id="InputImage" style={{ display: "none" }} onChange={handleImageSelection} />
-                        </label>
-                    </div>
-                    <div className="analyse-btn">
-                        <button type="submit">Analyse!</button>
-                    </div>
-                </form>
             </div>
         </div>
     );

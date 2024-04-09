@@ -7,7 +7,7 @@ const Right = ({ prediction, loading }) => {
         <div className="right-wrapper">
             <div className="right">
                 <div className="info">
-                    <div className="result-header">Results</div>
+                    <div className="result-header">Result</div>
                     <div className="result-text">
                         {loading ? (
                             <p>Loading...</p>
