@@ -12,13 +12,13 @@ model = load_model('skin_cancer_model.h5')
 
 
 
-classes = {4: ('nv', ' melanocytic nevi'),
-           6: ('mel', 'melanoma'),
-           2: ('bkl', 'benign keratosis-like lesions'),
-           1: ('bcc', ' basal cell carcinoma'),
-           5: ('vasc', ' pyogenic granulomas and hemorrhage'),
+classes = {4: ('nv', ' Melanocytic Nevi'),
+           6: ('mel', 'Melanoma'),
+           2: ('bkl', 'Benign keratosis-like lesions'),
+           1: ('bcc', ' Basal cell carcinoma'),
+           5: ('vasc', ' Pyogenic granulomas and hemorrhage'),
            0: ('akiec', 'Actinic keratoses and intraepithelial carcinomae'),
-           3: ('df', 'dermatofibroma')}
+           3: ('df', 'Dermatofibroma')}
 
 @app.route('/predict', methods=['POST'])
 def predict():
